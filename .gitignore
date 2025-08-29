@@ -41,3 +41,28 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+python_backend/venv/
+python_backend/__pycache__/
+*.dylib
+
+# Large binary files
+*.node
+*.dylib
+*.so
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
