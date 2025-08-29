@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl      = env("DIRECT_URL")
+}
+
+
+model User {
+  id            String    @id @default(uuid())
+  clerkUserId   String    @unique // clerk user id
+  email         String    @unique
+  name          String?
+  imageUrl      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  portfolios    Portfolio[] // A user can have many portfolios
+
+  @@map("users")
+}
+
+model Portfolio {
+  id          Int                @id @default(autoincrement())
+  name        String
+  createdAt   DateTime           @default(now())
+
+  userId      String             // must match User.id type
+  user        User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  portfolioStocks PortfolioStock[]
+}
+
+model PortfolioStock {
+  id                Int        @id @default(autoincrement())
+  portfolioId       Int
+  ticker            String
+  shares            Float
+  purchaseDate      DateTime
+  purchasePrice     Float?
+  reinvestDividends Boolean  @default(false)
+  targetWeight      Float?      // Percentage of portfolio
+
+  portfolio         Portfolio   @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+}
+
+
+
