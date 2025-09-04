@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Professional README template with badges and setup guide
 - Contributing guidelines and code standards
-- MIT License for open source compliance
 - Project documentation structure
 
 ### Changed
