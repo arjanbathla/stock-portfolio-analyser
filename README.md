@@ -11,10 +11,6 @@
 
 > **Advanced quantitative portfolio management platform with institutional-grade risk analytics and machine learning forecasting**
 
-## 🚀 Live Demo
-
-**[View Live Application](https://your-deployment-url.com)** *(Coming Soon)*
-
 ## ✨ Features
 
 ### 📈 **Portfolio Management**
@@ -204,16 +200,6 @@ pytest
 npm run test:e2e
 ```
 
-## 📦 Deployment
-
-### Vercel (Recommended)
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel --prod
-```
 
 ### Docker Deployment
 ```bash
@@ -229,36 +215,6 @@ npm run build
 # Start production server
 npm start
 ```
-
-## 📚 API Documentation
-
-### Portfolio Endpoints
-```http
-GET /api/portfolios          # Get user portfolios
-POST /api/portfolios         # Create new portfolio
-PUT /api/portfolios/:id      # Update portfolio
-DELETE /api/portfolios/:id   # Delete portfolio
-```
-
-### Forecasting Endpoints
-```http
-POST /api/forecast/portfolio # Portfolio forecasting
-GET /api/forecast/stock/:id  # Individual stock forecast
-POST /api/forecast/risk      # Risk metrics calculation
-```
-
-### Stock Data Endpoints
-```http
-GET /api/stocks/search       # Search stocks
-GET /api/stocks/:ticker      # Get stock data
-GET /api/stocks/:ticker/history # Historical data
-```
-
-**Full API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Development Workflow
 1. Fork the repository
@@ -280,59 +236,19 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - **API Response Time**: < 200ms (95th percentile)
 - **Database Query Time**: < 50ms (average)
 
-## 🔒 Security
-
-- **OWASP Top 10** compliance
-- **Regular security audits** and dependency updates
-- **Rate limiting** and request validation
-- **SQL injection** protection with Prisma ORM
-- **XSS protection** with React's built-in security
-
-## 📈 Roadmap
-
-### Q1 2024
-- [ ] **Real-time notifications** for portfolio alerts
-- [ ] **Advanced charting** with TradingView integration
-- [ ] **Mobile app** (React Native)
-
-### Q2 2024
-- [ ] **AI-powered insights** and recommendations
-- [ ] **Social trading** features
-- [ ] **Multi-currency** support
-
-### Q3 2024
-- [ ] **Institutional features** (compliance, reporting)
-- [ ] **API marketplace** for third-party integrations
-- [ ] **Blockchain integration** for tokenized assets
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Financial data providers**: Alpha Vantage, Yahoo Finance
 - **Open source libraries**: Next.js, FastAPI, Chart.js
-- **Community contributors** and beta testers
 
-## 📞 Support
 
-- **Documentation**: [Wiki](https://github.com/arjanbathla/stock-portfolio-analyser/wiki)
-- **Issues**: [GitHub Issues](https://github.com/arjanbathla/stock-portfolio-analyser/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/arjanbathla/stock-portfolio-analyser/discussions)
-- **Email**: support@yourdomain.com
-
----
-
-<div align="center">
-
-**Made with ❤️ by Arjan Bathla**
+**Made by Arjan Bathla**
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arjanbathla)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/
 arjan-bathla-b59484236)
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://yourportfolio.com)
 
-**⭐ Star this repository if you found it helpful!**
+
 
 </div>
